@@ -9,9 +9,23 @@ import SwiftUI
 
 struct AccountView: View {
     var body: some View {
-        Text("Account  View")
+        NavigationView{
+            Text ("Account View")
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        HStack {
+                            Image(systemName: "person")
+                            Text("Account")
+                        }.font(.largeTitle)
+                    }
+                }
+        }
     }
 }
+
+
+
 
 #Preview {
     AccountView()

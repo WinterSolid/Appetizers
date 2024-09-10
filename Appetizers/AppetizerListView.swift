@@ -9,9 +9,23 @@ import SwiftUI
 
 struct AppetizerListView: View {
     var body: some View {
-        Text("Appetizer List View")
+        NavigationView{
+            Text ("AppetizerListView")
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        HStack {
+                            Image(systemName: "fork.knife")
+                            Text("Appetizers")
+                        }.font(.largeTitle)
+                    }
+                }
+        }
     }
 }
+
+
+
 
 #Preview {
     AppetizerListView()

@@ -9,9 +9,23 @@ import SwiftUI
 
 struct OrderView: View {
     var body: some View {
-        Text("Order View")
+        NavigationView{
+            Text ("Order View")
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        HStack {
+                            Image(systemName: "bag")
+                            Text("My Order")
+                        }.font(.largeTitle)
+                    }
+                }
+        }
     }
 }
+
+
+
 
 #Preview {
     OrderView()
